@@ -1,565 +1,1671 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- =========================
-       基本SEOメタ
-  ========================== -->
-  <title>d払い・dカード・iD 最適決済ガイド｜コンビニ・外食・ネットの一番トクな支払い方</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="d払い・dカード・iD・iD決済の最適な使い分けを、公式仕様ベースで整理した実務用チートシート。コンビニ3社・外食チェーン・ネット決済で「どれで払うのが一番トクか」を制度から逆算して解説します。" />
-  <meta name="keywords" content="d払い,dカード,iD,ドコモ,決済,ポイント,還元率,コンビニ,ローソン,ファミマ,セブン,吉野家,スシロー,ネットショッピング,最適決済" />
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>d払い・dカード・iD 実務ガイド【2026年2月更新】還元率を最大化する全シーン解説</title>
+  <meta name="description" content="d払い・dカード PLATINUM・iDの最適な使い分けを公式仕様から徹底解説。コンビニ・外食・ネット・タクシーの全シーンで還元率を最大化する設定方法と、2026年2月時点の最新仕様変更（公共料金半減・合算払い変更）まで網羅した実務ガイド。">
+  <meta name="keywords" content="d払い,dカード,dカードPLATINUM,iD,ポイント還元,還元率最大化,d払い設定,dカードiD違い,d払いコンビニ,ローソン,ファミマ,セブン,d払いAmazon,dポイント,携帯料金合算払い,公共料金還元率改定,dカードGOLD,dポイントクラブ">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="author" content="d払い・dカード実務ガイド">
+  <meta name="theme-color" content="#141820">
+  <link rel="canonical" href="https://axlrose1202.github.io/dpay-guide/">
 
-  <!-- 正規URL（必要に応じて書き換え） -->
-<link rel="canonical" href="https://axlrose1202.github.io/dpay-guide/" />
+  <!-- ===== OGP ===== -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="d払い・dカード・iD 実務ガイド">
+  <meta property="og:title" content="d払い・dカード・iD 実務ガイド【2026年2月更新】還元率を最大化する全シーン解説">
+  <meta property="og:description" content="d払い・dカード・iDの最適な使い分けを公式仕様から解説。コンビニ・外食・ネットの全シーンで還元率を最大化。2026年2月の最新仕様変更も反映。">
+  <meta property="og:url" content="https://axlrose1202.github.io/dpay-guide/">
+  <meta property="og:image" content="https://axlrose1202.github.io/dpay-guide/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="d払い・dカード・iD 実務ガイド 2026年版">
+  <meta property="article:published_time" content="2025-01-01T00:00:00+09:00">
+  <meta property="article:modified_time" content="2026-02-28T00:00:00+09:00">
+  <meta property="article:section" content="キャッシュレス・節約">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="d払い・dカード・iD 実務ガイド【2026年2月更新】">
+  <meta name="twitter:description" content="d払い・dカード・iDの最適な使い分けを公式仕様から解説。2026年2月の最新仕様変更も反映した全シーン対応ガイド。">
+  <meta name="twitter:image" content="https://axlrose1202.github.io/dpay-guide/ogp.png">
 
-  <!-- =========================
-       OGP / SNS
-  ========================== -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="d払い・dカード・iD 最適決済ガイド" />
-  <meta property="og:title" content="d払い・dカード・iD 最適決済ガイド｜コンビニ・外食・ネットの一番トクな支払い方" />
-  <meta property="og:description" content="d払い・dカード・iDの最適な使い分けを、公式仕様ベースで整理した実務用チートシート。コンビニ・外食・ネット決済で迷わないための制度ガチ寄せまとめ。" />
-  <meta property="og:url" content="https://example.com/dpay-dcard-id-guide" />
-  <!-- 仮のOG画像URL：実運用時に差し替え推奨 -->
-  <meta property="og:image" content="https://example.com/ogp/dpay-dcard-id-guide.png" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="d払い・dカード・iD 最適決済ガイド｜コンビニ・外食・ネットの一番トクな支払い方" />
-  <meta name="twitter:description" content="d払い・dカード・iDの最適な使い分けを、公式仕様ベースで整理した実務用チートシート。" />
-  <meta name="twitter:image" content="https://example.com/ogp/dpay-dcard-id-guide.png" />
-
-  <!-- =========================
-       構造化データ（WebPage + Breadcrumb）
-  ========================== -->
+  <!-- ===== STRUCTURED DATA ===== -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "d払い・dカード・iD 最適決済ガイド｜コンビニ・外食・ネットの一番トクな支払い方",
-    "url": "https://example.com/dpay-dcard-id-guide",
-    "description": "d払い・dカード・iD・iD決済の最適な使い分けを、公式仕様ベースで整理した実務用チートシート。コンビニ3社・外食チェーン・ネット決済で「どれで払うのが一番トクか」を制度から逆算して解説します。",
-    "inLanguage": "ja",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "d払い・dカード・iD 最適決済まとめ",
-      "url": "https://example.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "d払い・dカード・iD 最適決済まとめ（個人運営）"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "ホーム",
-        "item": "https://example.com/"
+        "@type":"WebSite",
+        "@id":"https://axlrose1202.github.io/dpay-guide/#website",
+        "url":"https://axlrose1202.github.io/dpay-guide/",
+        "name":"d払い・dカード・iD 実務ガイド",
+        "inLanguage":"ja"
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "d払い・dカード・iD 最適決済ガイド",
-        "item": "https://example.com/dpay-dcard-id-guide"
+        "@type":"Article",
+        "@id":"https://axlrose1202.github.io/dpay-guide/#article",
+        "headline":"d払い・dカード・iD 実務ガイド【2026年2月更新】還元率を最大化する全シーン解説",
+        "description":"d払い・dカード・iDの最適な使い分けを公式仕様から徹底解説。2026年2月時点の最新仕様変更まで反映した実務ガイド。",
+        "datePublished":"2025-01-01",
+        "dateModified":"2026-02-28",
+        "author":{"@type":"Person","name":"axlrose1202"},
+        "publisher":{"@type":"Organization","name":"d払い・dカード実務ガイド","url":"https://axlrose1202.github.io/dpay-guide/"},
+        "mainEntityOfPage":"https://axlrose1202.github.io/dpay-guide/",
+        "keywords":["d払い","dカード","iD","dカードPLATINUM","ポイント還元","還元率","キャッシュレス"],
+        "articleSection":"キャッシュレス・節約"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"ホーム","item":"https://axlrose1202.github.io/dpay-guide/"},
+          {"@type":"ListItem","position":2,"name":"d払い・dカード・iD 実務ガイド","item":"https://axlrose1202.github.io/dpay-guide/"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"d払いとiDの違いは何ですか？どちらがお得ですか？",
+            "acceptedAnswer":{"@type":"Answer","text":"d払いはQRコード決済、iDはFeliCaベースの非接触IC決済です。dカードPLATINUMを使う場合、d払い（支払い方法＝dカード）は基本2.5%還元、iD（dカードタッチ）は2.0%還元となり、d払いが常に0.5%有利です。ただしd払いが使えない店舗ではiDを使います。"}
+          },
+          {
+            "@type":"Question",
+            "name":"d払いの支払い方法はどこで変更できますか？",
+            "acceptedAnswer":{"@type":"Answer","text":"d払いアプリの右下メニュー→「お支払い方法」から変更できます。初期設定では携帯料金合算払いになっていることが多く、そのままではdカードポイントも年間利用額特典も加算されません。必ずdカードに変更してください。"}
+          },
+          {
+            "@type":"Question",
+            "name":"dカードPLATINUMの年間利用額特典はどのくらいもらえますか？",
+            "acceptedAnswer":{"@type":"Answer","text":"年間利用額100万円ごとに1万円相当のクーポンが付与されます。100万円で1万円分、200万円で2万円分、300万円で3万円分、400万円で4万円分（最大）となります。dカードGOLDは2025年配布分から100万円利用で1万円に改悪されています。"}
+          },
+          {
+            "@type":"Question",
+            "name":"ローソンでd払いを使う際の最もお得な方法は？",
+            "acceptedAnswer":{"@type":"Answer","text":"①d払いアプリのdポイントカードを連携した状態でバーコードを提示し、②d払い（支払い方法＝dカードPLATINUM）で決済する方法が最もお得です。d払い0.5%＋dカード支払い特典0.5%＋dカードポイント1.0%（dPt加盟店提示分）＋年間利用額特典1.0%＝実質3.0%以上の還元が得られます。"}
+          },
+          {
+            "@type":"Question",
+            "name":"AmazonでD払いは損ですか？",
+            "acceptedAnswer":{"@type":"Answer","text":"原則として損です。AmazonのD払いは携帯料金合算払いに強制されるため、dカードポイントも年間利用額特典も加算されず0.5%のみの還元になります。dカードをクレジットカードとして直接登録して決済すれば1.0%＋年間利用額特典1.0%＝実質2.0%の還元が得られます。"}
+          },
+          {
+            "@type":"Question",
+            "name":"2026年2月から公共料金の還元率が変わりましたか？",
+            "acceptedAnswer":{"@type":"Answer","text":"はい。2026年2月1日から、dカードによる電気料金・ガス料金・水道料金・eLTAX（地方税）の支払いに対するdポイント還元率が、利用額100円につき1ポイントから200円につき1ポイントに半減しました。実質0.5%の還元率になっています。"}
+          },
+          {
+            "@type":"Question",
+            "name":"マクドナルドでd払いは使えますか？",
+            "acceptedAnswer":{"@type":"Answer","text":"店頭レジでのQRコード読み取りによるd払いは使えません。マクドナルド公式アプリのモバイルオーダー経由であればd払いが使用可能です。店頭の電子マネーではiD（dカードタッチ）が利用できます。"}
+          },
+          {
+            "@type":"Question",
+            "name":"dカードPLATINUMとdカードGOLDはどちらがお得ですか？",
+            "acceptedAnswer":{"@type":"Answer","text":"基本還元率・d払い優位性は同じです。主な違いは年間利用額特典で、PLATINUMは最大4万円分（400万円利用）、GOLDは2025年配布分から最大1万円分（100万円利用）に改悪されています。年会費差（PLATINUM 29,700円 vs GOLD 11,000円）を考慮しつつ、年間利用額で判断することを推奨します。"}
+          }
+        ]
+      },
+      {
+        "@type":"HowTo",
+        "name":"d払いの還元率を最大化する設定手順",
+        "description":"dカードPLATINUMを使ってd払いの還元率を最大化するための設定方法",
+        "totalTime":"PT10M",
+        "step":[
+          {"@type":"HowToStep","position":1,"name":"d払いアプリの支払い方法をdカードに変更","text":"d払いアプリ右下メニュー→「お支払い方法」からdカードPLATINUMを選択。携帯料金合算払いのままだと還元率が0.5%に留まる。"},
+          {"@type":"HowToStep","position":2,"name":"dポイントカードをd払いアプリと連携","text":"d払いアプリ内の「dポイントカード」設定から連携。コンビニでの提示が自動化される。"},
+          {"@type":"HowToStep","position":3,"name":"コンビニ・外食はd払いで決済","text":"ローソン・ファミマ・セブン・吉野家・スシロー等でd払い（dカード設定）を使用。"},
+          {"@type":"HowToStep","position":4,"name":"ネットショッピングはdカード直払いに設定","text":"Amazon等のネットショップにはdカードをクレジットカードとして登録し、d払いは使用しない。"},
+          {"@type":"HowToStep","position":5,"name":"d払いが使えない店舗はiD（dカードタッチ）で決済","text":"d払い非対応店舗ではdカードタッチ（iD）で決済し、実質2.0%の還元を確保する。"}
+        ]
       }
     ]
   }
   </script>
 
-  <!-- =========================
-       スタイル（元デザイン維持）
-  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--bg:#050816;--bg-elevated:#0b1020;--accent:#3b82f6;--accent-soft:rgba(59,130,246,.15);--accent-strong:#2563eb;--text-main:#e5e7eb;--text-muted:#9ca3af;--border-subtle:rgba(148,163,184,.35);--danger:#f97373;--success:#4ade80;--warning:#facc15;--radius-lg:18px;--radius-md:12px;--radius-pill:999px;--shadow-soft:0 18px 45px rgba(15,23,42,.75);--shadow-subtle:0 10px 30px rgba(15,23,42,.6);--font-sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--transition-fast:180ms ease-out}
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:var(--font-sans);background:radial-gradient(circle at top,#1d283a 0,#020617 55%,#000 100%);color:var(--text-main);-webkit-font-smoothing:antialiased}
-    body{min-height:100vh;display:flex;flex-direction:column}
-    .page{max-width:1120px;margin:0 auto;padding:32px 16px 48px}
-    header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:linear-gradient(to bottom,rgba(2,6,23,.96),rgba(2,6,23,.75),transparent)}
-    .nav{max-width:1120px;margin:0 auto;padding:14px 16px 10px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .nav-left{display:flex;align-items:center;gap:10px}
-    .logo{width:32px;height:32px;border-radius:12px;background:radial-gradient(circle at 30% 20%,#60a5fa,#1d4ed8 45%,#020617 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(59,130,246,.5),0 12px 30px rgba(15,23,42,.9);font-size:18px;font-weight:700;color:#eff6ff}
-    .nav-title{display:flex;flex-direction:column;gap:2px}
-    .nav-title-main{font-size:15px;font-weight:600;letter-spacing:.03em}
-    .nav-title-sub{font-size:11px;color:var(--text-muted)}
-    .nav-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .nav-link{font-size:11px;padding:6px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.4);color:var(--text-muted);text-decoration:none;display:inline-flex;align-items:center;gap:6px;background:radial-gradient(circle at top left,rgba(148,163,184,.18),rgba(15,23,42,.9));box-shadow:0 8px 20px rgba(15,23,42,.7);transition:background var(--transition-fast),border-color var(--transition-fast),transform var(--transition-fast),box-shadow var(--transition-fast),color var(--transition-fast)}
-    .nav-link:hover{border-color:rgba(248,250,252,.7);color:#e5e7eb;background:radial-gradient(circle at top left,rgba(248,250,252,.18),rgba(15,23,42,.95));transform:translateY(-1px);box-shadow:0 14px 32px rgba(15,23,42,.9)}
-    main{margin-top:10px}
-    .hero{display:grid;grid-template-columns:minmax(0,3fr)minmax(0,2.4fr);gap:24px;align-items:center;margin-bottom:32px}
-    @media(max-width:840px){.hero{grid-template-columns:minmax(0,1fr)}}
-    .hero-text{padding:20px 18px 22px;border-radius:18px;background:radial-gradient(circle at top left,rgba(59,130,246,.18),rgba(15,23,42,.96));box-shadow:0 18px 45px rgba(15,23,42,.75);border:1px solid rgba(148,163,184,.45);position:relative;overflow:hidden}
-    .hero-pill{display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border-radius:999px;background:rgba(15,23,42,.9);border:1px solid rgba(148,163,184,.5);font-size:11px;color:var(--text-muted);margin-bottom:10px}
-    .hero-pill-badge{width:7px;height:7px;border-radius:999px;background:radial-gradient(circle at 30% 20%,#4ade80,#16a34a);box-shadow:0 0 0 1px rgba(22,163,74,.7)}
-    .hero-title{font-size:22px;font-weight:700;letter-spacing:.02em;margin-bottom:8px}
-    .hero-subtitle{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:14px}
-    .hero-highlight{display:inline-flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-    .hero-tag{font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid rgba(148,163,184,.5);background:rgba(15,23,42,.9);color:var(--text-main)}
-    .hero-math{font-size:12px;color:var(--text-muted);padding:8px 10px;border-radius:12px;background:rgba(15,23,42,.9);border:1px dashed rgba(148,163,184,.6);margin-bottom:10px}
-    .hero-math strong{color:#e5e7eb;font-weight:600}
-    .hero-note{font-size:11px;color:var(--text-muted)}
-    .hero-visual{position:relative;padding:18px 16px 18px;border-radius:18px;background:radial-gradient(circle at top,rgba(59,130,246,.2),rgba(15,23,42,.98));box-shadow:0 18px 45px rgba(15,23,42,.75);border:1px solid rgba(148,163,184,.45);overflow:hidden}
-    .hero-orbit{position:absolute;inset:0;opacity:.4;pointer-events:none;background:radial-gradient(circle at 20% 0%,rgba(59,130,246,.35),transparent 55%),radial-gradient(circle at 80% 100%,rgba(56,189,248,.25),transparent 55%)}
-    .hero-cards{position:relative;display:flex;flex-direction:column;gap:10px;z-index:1}
-    .chip-row{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid rgba(148,163,184,.5);background:rgba(15,23,42,.9);color:var(--text-muted);display:inline-flex;align-items:center;gap:6px}
-    .chip-dot{width:6px;height:6px;border-radius:999px;background:#22c55e}
-    .card-mini{border-radius:12px;padding:10px 11px;background:rgba(15,23,42,.96);border:1px solid rgba(148,163,184,.6);box-shadow:0 10px 30px rgba(15,23,42,.6);font-size:11px;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;align-items:center}
-    .card-mini-title{font-weight:600;margin-bottom:4px;font-size:12px}
-    .badge{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:999px;font-size:10px;border:1px solid rgba(148,163,184,.6);background:rgba(15,23,42,.9);color:var(--text-muted)}
-    .badge strong{color:#e5e7eb;font-weight:600}
-    .pill-math{font-size:11px;padding:4px 8px;border-radius:999px;background:rgba(15,23,42,.9);border:1px dashed rgba(148,163,184,.6);text-align:center}
-    .pill-math strong{color:#e5e7eb;font-weight:600}
-    .section{margin-bottom:32px}
-    .section-header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
-    .section-title{font-size:17px;font-weight:650;letter-spacing:.03em;display:flex;align-items:center;gap:8px}
-    .section-title .mark{width:8px;height:18px;border-radius:999px;background:linear-gradient(to bottom,#60a5fa,#22c55e)}
-    .section-sub{font-size:11px;color:var(--text-muted)}
-    .grid-2{display:grid;grid-template-columns:minmax(0,1.2fr)minmax(0,1.4fr);gap:16px}
-    @media(max-width:840px){.grid-2{grid-template-columns:minmax(0,1fr)}}
-    .card{border-radius:18px;padding:14px 14px 16px;background:radial-gradient(circle at top left,rgba(15,23,42,.96),rgba(15,23,42,.98));border:1px solid rgba(148,163,184,.5);box-shadow:0 10px 30px rgba(15,23,42,.6)}
-    .card-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
-    .card-title{font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
-    .card-title-pill{font-size:10px;padding:3px 8px;border-radius:999px;border:1px solid rgba(148,163,184,.6);color:var(--text-muted)}
-    .card-body{font-size:12px;color:var(--text-muted);line-height:1.7}
-    .card-body strong{color:#e5e7eb;font-weight:600}
-    .table-wrapper{border-radius:18px;border:1px solid rgba(148,163,184,.5);background:radial-gradient(circle at top,rgba(15,23,42,.96),rgba(15,23,42,.98));box-shadow:0 10px 30px rgba(15,23,42,.6);overflow:hidden}
-    table{width:100%;border-collapse:collapse;font-size:12px}
-    thead{background:linear-gradient(to right,rgba(15,23,42,.98),rgba(30,64,175,.9))}
-    th,td{padding:8px 10px;border-bottom:1px solid rgba(51,65,85,.9);text-align:left}
-    th{font-weight:600;color:#e5e7eb;white-space:nowrap}
-    tbody tr:nth-child(even){background:rgba(15,23,42,.96)}
-    tbody tr:nth-child(odd){background:rgba(15,23,42,.98)}
-    tbody tr:hover{background:rgba(30,64,175,.45)}
-    .tag{display:inline-flex;align-items:center;justify-content:center;padding:2px 7px;border-radius:999px;font-size:10px;border:1px solid rgba(148,163,184,.6);color:var(--text-muted);background:rgba(15,23,42,.9)}
-    .tag-strong{border-color:rgba(96,165,250,.9);color:#bfdbfe;background:rgba(30,64,175,.7)}
-    .tag-danger{border-color:rgba(248,113,113,.9);color:#fecaca;background:rgba(127,29,29,.7)}
-    .tag-good{border-color:rgba(52,211,153,.9);color:#bbf7d0;background:rgba(6,95,70,.7)}
-    .list{margin:0;padding-left:1.1em;font-size:12px;color:var(--text-muted);line-height:1.7}
-    .list li{margin-bottom:4px}
-    .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-    .pill{font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid rgba(148,163,184,.6);color:var(--text-muted);background:rgba(15,23,42,.9)}
-    .pill-strong{border-color:rgba(96,165,250,.9);color:#dbeafe;background:rgba(30,64,175,.8)}
-    .pill-bad{border-color:rgba(248,113,113,.9);color:#fee2e2;background:rgba(127,29,29,.8)}
-    footer{border-top:1px solid rgba(30,64,175,.8);margin-top:16px;padding-top:10px;padding-bottom:8px;font-size:11px;color:var(--text-muted);text-align:center;background:radial-gradient(circle at top,rgba(15,23,42,.96),rgba(2,6,23,1))}
-    .foot-note{font-size:10px;color:#6b7280;margin-top:4px}
-    @media(max-width:640px){
-      .page{padding-inline:14px}
-      .hero-text,.hero-visual{padding-inline:14px}
-      th,td{padding-inline:8px}
+    /* ===== DESIGN RATIONALE =====
+       背景 #141820（純黒回避・LCDハレーション防止）
+       本文 #c8d0dc（輝度を落とした白・長文疲労軽減）
+       サブテキスト #7e8fa8（コントラスト比 4.7:1 でWCAG AA準拠）
+       アクセント #4a9eff（純青より少し柔らかく・背景との調和）
+       本文フォント 15px（Google Material Design推奨最小値）
+       行間 1.8（日本語長文の標準推奨値）
+    ===== */
+
+    :root {
+      --bg:        #141820;
+      --surface:   #1c2330;
+      --surface2:  #232d3d;
+      --border:    rgba(255,255,255,0.07);
+      --border-md: rgba(255,255,255,0.13);
+      --text:      #c8d0dc;
+      --text-em:   #e4eaf2;
+      --muted:     #7e8fa8;
+      --faint:     #4a5568;
+      --blue:      #4a9eff;
+      --blue-dim:  rgba(74,158,255,0.12);
+      --blue-bd:   rgba(74,158,255,0.28);
+      --green:     #3ecf8e;
+      --green-dim: rgba(62,207,142,0.08);
+      --green-bd:  rgba(62,207,142,0.22);
+      --red:       #f06b6b;
+      --red-dim:   rgba(240,107,107,0.08);
+      --red-bd:    rgba(240,107,107,0.22);
+      --amber:     #f0b429;
+      --amber-dim: rgba(240,180,41,0.08);
+      --amber-bd:  rgba(240,180,41,0.22);
+      --font:      'Noto Sans JP', sans-serif;
+      --mono:      'JetBrains Mono', monospace;
+      --r:         10px;
+      --r-lg:      16px;
     }
 
-    /* アクセスカウンター用 */
-    .counter-wrapper{
-      margin-top:10px;
-      font-size:11px;
-      color:var(--text-muted);
-      display:flex;
-      justify-content:center;
-      gap:8px;
-      align-items:center;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.8;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
-    .counter-badge{
-      padding:3px 10px;
-      border-radius:999px;
-      border:1px solid rgba(148,163,184,.6);
-      background:rgba(15,23,42,.9);
-      box-shadow:0 8px 20px rgba(15,23,42,.7);
-      font-variant-numeric:tabular-nums;
+
+    /* ===== SKIP NAV ===== */
+    .skip { position: absolute; top: -99px; left: 0; z-index: 999;
+      background: var(--blue); color: #fff; padding: 8px 14px;
+      font-size: 13px; text-decoration: none; transition: top .15s; }
+    .skip:focus { top: 0; }
+
+    /* ===== LAYOUT ===== */
+    .wrap  { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    .wrap-wide { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== HEADER ===== */
+    .hd {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(20,24,32,0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 11px 0;
     }
+    .hd-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .hd-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-em); }
+    .hd-mark {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: linear-gradient(135deg,#4a9eff,#1a6fd4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 17px; color: #fff; flex-shrink: 0;
+      box-shadow: 0 3px 12px rgba(74,158,255,0.35);
+    }
+    .hd-name { font-size: 14px; font-weight: 700; line-height: 1.3; }
+    .hd-sub  { font-size: 11px; color: var(--muted); }
+    .hd-nav  { display: flex; gap: 5px; flex-wrap: wrap; }
+    .hd-nav a {
+      font-size: 12px; color: var(--muted); text-decoration: none;
+      padding: 5px 10px; border-radius: 6px; border: 1px solid var(--border);
+      transition: color .15s, border-color .15s, background .15s;
+    }
+    .hd-nav a:hover { color: var(--text-em); border-color: var(--border-md); background: var(--surface); }
+    @media(max-width:640px){ .hd-nav { display:none; } }
+
+    /* ===== BREADCRUMB ===== */
+    .bc { display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+      padding: 10px 0 0; font-size: 12px; color: var(--faint); }
+    .bc a { color: var(--faint); text-decoration:none; }
+    .bc a:hover { color: var(--muted); }
+
+    /* ===== HERO ===== */
+    .hero { padding: 44px 0 36px; border-bottom: 1px solid var(--border); }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 600; color: var(--blue);
+      background: var(--blue-dim); border: 1px solid var(--blue-bd);
+      padding: 4px 11px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .hero-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--green); }
+    h1 {
+      font-size: clamp(20px, 3.8vw, 32px);
+      font-weight: 700; line-height: 1.35; letter-spacing: -0.02em;
+      color: var(--text-em); margin-bottom: 14px;
+    }
+    h1 em { font-style: normal; color: var(--blue); }
+    .hero-desc { font-size: 14px; color: var(--muted); line-height: 1.85; max-width: 680px; margin-bottom: 20px; }
+    .hero-meta { display:flex; gap:18px; flex-wrap:wrap; font-size:12px; color:var(--faint);
+      border-top:1px solid var(--border); padding-top:14px; }
+    .hero-meta-item { display:flex; align-items:center; gap:5px; }
+
+    /* ===== UPDATE BADGE ===== */
+    .upd {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 6px; padding: 4px 10px;
+      font-size: 12px; color: var(--muted); margin-bottom: 10px;
+    }
+
+    /* ===== ALERT BANNER（仕様変更通知） ===== */
+    .alert-banner {
+      background: var(--amber-dim); border: 1px solid var(--amber-bd);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--r); padding: 14px 16px;
+      font-size: 13px; color: var(--text); line-height: 1.75;
+      margin: 28px 0;
+    }
+    .alert-banner-title { font-weight: 700; color: var(--amber); margin-bottom: 6px; display:flex; align-items:center; gap:6px; }
+    .alert-banner ul { padding-left: 1.2em; margin-top: 6px; }
+    .alert-banner li { margin-bottom: 4px; }
+
+    /* ===== KEY FIGURES ===== */
+    .figures {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px; margin: 28px 0;
+    }
+    .fig {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 16px 18px; text-align: center;
+    }
+    .fig-num { font-family: var(--mono); font-size: 26px; font-weight: 700; color: var(--blue); }
+    .fig-label { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--blue); border-radius: var(--r);
+      padding: 18px 22px; margin: 28px 0;
+    }
+    .toc-title { font-size: 13px; font-weight: 700; color: var(--text-em); margin-bottom: 10px; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 5px; counter-reset: toc; }
+    .toc-list > li { counter-increment: toc; }
+    .toc-list a {
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 8px; transition: color .15s;
+    }
+    .toc-list a:hover { color: var(--blue); }
+    .toc-list a::before {
+      content: counter(toc);
+      min-width: 20px; height: 20px; border-radius: 5px;
+      background: var(--blue-dim); border: 1px solid var(--blue-bd);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: var(--blue); flex-shrink: 0;
+    }
+
+    /* ===== SECTION ===== */
+    .art { padding: 44px 0; }
+    .sec { margin-bottom: 52px; }
+    .sec-head { display:flex; align-items:flex-start; gap:11px; margin-bottom:18px;
+      padding-bottom:12px; border-bottom:1px solid var(--border); }
+    .sec-n {
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      color: var(--blue); background: var(--blue-dim); border: 1px solid var(--blue-bd);
+      border-radius: 5px; padding: 2px 7px; margin-top: 4px; flex-shrink: 0;
+    }
+    h2 { font-size: clamp(17px, 2.8vw, 22px); font-weight: 700;
+      line-height: 1.35; color: var(--text-em); letter-spacing: -0.01em; }
+    .sec-desc { font-size: 13px; color: var(--muted); margin-top: 5px; }
+    h3 { font-size: 15px; font-weight: 700; color: var(--text-em);
+      margin: 22px 0 10px; }
+
+    /* ===== PROSE ===== */
+    .prose { font-size: 15px; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+    .prose strong { color: var(--text-em); font-weight: 700; }
+    .prose a { color: var(--blue); text-decoration: underline; }
+
+    /* ===== CALLOUT ===== */
+    .co {
+      border-radius: var(--r); padding: 14px 16px;
+      margin: 16px 0; font-size: 14px; line-height: 1.75;
+    }
+    .co-title { font-weight: 700; font-size: 13px; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 6px; }
+    .co-blue  { background: var(--blue-dim);  border: 1px solid var(--blue-bd);  color: var(--text); }
+    .co-blue .co-title  { color: var(--blue);  }
+    .co-green { background: var(--green-dim); border: 1px solid var(--green-bd); color: var(--text); }
+    .co-green .co-title { color: var(--green); }
+    .co-red   { background: var(--red-dim);   border: 1px solid var(--red-bd);   color: var(--text); }
+    .co-red .co-title   { color: var(--red);   }
+    .co-amber { background: var(--amber-dim); border: 1px solid var(--amber-bd); color: var(--text); }
+    .co-amber .co-title { color: var(--amber); }
+    .co ul, .co ol { padding-left: 1.3em; margin-top: 6px; }
+    .co li { margin-bottom: 3px; }
+    .co strong { color: var(--text-em); font-weight: 700; }
+
+    /* ===== TABLE ===== */
+    .tw { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--border); margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 480px; }
+    caption { font-size: 12px; color: var(--muted); text-align: left;
+      padding: 9px 12px 6px; border-bottom: 1px solid var(--border); caption-side: top; }
+    thead { background: var(--surface2); }
+    th { padding: 9px 12px; text-align: left; font-weight: 700; font-size: 12px;
+      color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); }
+    td { padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+    /* ===== BADGE ===== */
+    .b { display:inline-flex; align-items:center; gap:3px; padding:2px 8px;
+      border-radius:999px; font-size:11px; font-weight:700; white-space:nowrap; }
+    .b-blue   { background:var(--blue-dim);  border:1px solid var(--blue-bd);  color:var(--blue);  }
+    .b-green  { background:var(--green-dim); border:1px solid var(--green-bd); color:var(--green); }
+    .b-red    { background:var(--red-dim);   border:1px solid var(--red-bd);   color:var(--red);   }
+    .b-amber  { background:var(--amber-dim); border:1px solid var(--amber-bd); color:var(--amber); }
+    .b-gray   { background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--muted); }
+
+    /* ===== RATE ===== */
+    .rt-hi { font-family:var(--mono); font-size:18px; font-weight:700; color:var(--green); }
+    .rt-md { font-family:var(--mono); font-size:15px; font-weight:700; color:var(--amber); }
+    .rt-lo { font-family:var(--mono); font-size:14px; font-weight:700; color:var(--muted); }
+    .rt-ng { font-family:var(--mono); font-size:14px; font-weight:700; color:var(--red); }
+
+    /* ===== CARD GRID ===== */
+    .cg { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin:16px 0; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 16px 18px;
+    }
+    .card-title { font-size: 14px; font-weight: 700; color: var(--text-em);
+      margin-bottom: 8px; display: flex; align-items: center; gap: 7px; }
+    .card-body { font-size: 14px; color: var(--text); line-height: 1.75; }
+    .card-body strong { color: var(--text-em); }
+    .card-body ul { padding-left: 1.2em; margin-top: 6px; }
+    .card-body li { margin-bottom: 3px; }
+
+    /* ===== SCENARIO CARDS ===== */
+    .sg { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:16px 0; }
+    .sc {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 14px 16px;
+    }
+    .sc-store { font-size: 15px; font-weight: 700; color: var(--text-em);
+      margin-bottom: 6px; display:flex; align-items:center; gap:6px; }
+    .sc-method { font-size: 12px; color: var(--blue); font-weight: 600; margin-bottom: 4px; }
+    .sc-rate { font-family:var(--mono); font-size:24px; font-weight:700; color:var(--green); }
+    .sc-unit { font-size:11px; color:var(--faint); }
+    .sc-break { font-size:12px; color:var(--muted); margin-top:8px;
+      border-top:1px solid var(--border); padding-top:8px; line-height:1.8; }
+    .sc-break strong { color:var(--green); }
+
+    /* ===== FORMULA ===== */
+    .formula {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 14px 18px; margin: 14px 0;
+      font-size: 14px; line-height: 2.1;
+    }
+    .fl { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; padding: 2px 0; }
+    .fl:not(:last-child) { border-bottom: 1px solid var(--border); }
+    .fl-label { color: var(--muted); min-width: 200px; font-size: 13px; }
+    .fl-eq { color: var(--faint); }
+    .fl-total { font-family:var(--mono); font-weight:700; font-size:16px; }
+    .fl-note { font-size: 11px; color: var(--faint); display:block; margin-top:6px; }
+
+    /* ===== MATRIX ===== */
+    .mw { overflow-x:auto; margin:16px 0; }
+    .mx { width:100%; border-collapse:collapse; font-size:13px; min-width:600px; }
+    .mx th, .mx td { padding:9px 12px; border:1px solid var(--border); text-align:center; }
+    .mx thead th { background:var(--surface2); font-size:12px; color:var(--muted); }
+    .mx .rl { text-align:left; font-weight:700; background:var(--surface); white-space:nowrap; color:var(--text-em); }
+    .mx .best { background:rgba(62,207,142,0.1);  color:var(--green); font-weight:700; }
+    .mx .good { background:rgba(74,158,255,0.08); color:var(--blue); }
+    .mx .bad  { background:rgba(240,107,107,0.08); color:var(--red); }
+    .mx .na   { color:var(--faint); font-size:12px; }
+
+    /* ===== STEPS ===== */
+    .steps { display:flex; flex-direction:column; gap:0; margin:16px 0; }
+    .step { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--border); }
+    .step:last-child { border-bottom:none; }
+    .step-nw { display:flex; flex-direction:column; align-items:center; flex-shrink:0; }
+    .step-n {
+      width:30px; height:30px; border-radius:999px;
+      background:linear-gradient(135deg,var(--blue),#1a6fd4);
+      display:flex; align-items:center; justify-content:center;
+      font-size:13px; font-weight:700; color:#fff;
+    }
+    .step-line { width:1px; flex:1; background:var(--border); margin-top:3px; }
+    .step:last-child .step-line { display:none; }
+    .step-body { flex:1; padding-top:3px; }
+    .step-title { font-size:14px; font-weight:700; color:var(--text-em); margin-bottom:5px; }
+    .step-desc { font-size:14px; color:var(--text); line-height:1.75; }
+    .step-desc strong { color:var(--text-em); }
+
+    /* ===== DANGER / TIP LIST ===== */
+    .dlist, .tlist { display:flex; flex-direction:column; gap:10px; margin:16px 0; }
+    .di, .ti {
+      display:flex; gap:12px; align-items:flex-start;
+      border-radius:var(--r); padding:13px 15px;
+    }
+    .di { background:var(--red-dim);   border:1px solid var(--red-bd);   }
+    .ti { background:var(--green-dim); border:1px solid var(--green-bd); }
+    .di-ic, .ti-ic { font-size:18px; flex-shrink:0; margin-top:1px; }
+    .di-body, .ti-body { flex:1; }
+    .di-title { font-size:14px; font-weight:700; color:var(--red);   margin-bottom:4px; }
+    .ti-title { font-size:14px; font-weight:700; color:var(--green); margin-bottom:4px; }
+    .di-desc, .ti-desc { font-size:14px; color:var(--text); line-height:1.75; }
+    .di-desc strong, .ti-desc strong { color:var(--text-em); }
+
+    /* ===== FAQ ===== */
+    .faq-list { display:flex; flex-direction:column; gap:8px; margin:16px 0; }
+    .faq-item { background:var(--surface); border:1px solid var(--border); border-radius:var(--r); overflow:hidden; }
+    .faq-q {
+      padding:13px 16px; font-size:14px; font-weight:700; color:var(--text-em);
+      cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+      gap:10px; list-style:none; transition:background .15s;
+    }
+    .faq-q:hover { background:var(--surface2); }
+    .faq-q::-webkit-details-marker { display:none; }
+    .faq-ic { font-size:16px; color:var(--muted); transition:transform .2s; flex-shrink:0; }
+    details[open] .faq-ic { transform:rotate(45deg); }
+    .faq-a { padding:0 16px 13px; font-size:14px; color:var(--text); line-height:1.8;
+      border-top:1px solid var(--border); }
+    .faq-a strong { color:var(--text-em); }
+
+    /* ===== DIVIDER ===== */
+    hr { border:none; border-top:1px solid var(--border); margin:40px 0; }
+
+    /* ===== FOOTER ===== */
+    .ft { border-top:1px solid var(--border); padding:28px 0;
+      font-size:13px; color:var(--faint); text-align:center; line-height:1.8; }
+    .ft a { color:var(--faint); }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:640px){
+      .sg { grid-template-columns:repeat(2,1fr); }
+      .fl-label { min-width:unset; width:100%; }
+    }
+    @media(max-width:400px){ .sg { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="nav" aria-label="メインナビゲーション">
-      <div class="nav-left">
-        <div class="logo" aria-hidden="true">d</div>
-        <div class="nav-title">
-          <div class="nav-title-main">d払い・dカード・iD 最適決済ガイド</div>
-          <div class="nav-title-sub">「どれで払うのが一番トクか？」を制度ベースで整理</div>
+<a href="#main" class="skip">本文へスキップ</a>
+
+<!-- ===== HEADER ===== -->
+<header class="hd" role="banner">
+  <div class="wrap-wide">
+    <div class="hd-inner">
+      <a href="#" class="hd-logo" aria-label="d払い・dカード・iD 実務ガイド トップへ">
+        <div class="hd-mark" aria-hidden="true">d</div>
+        <div>
+          <div class="hd-name">d払い・dカード・iD 実務ガイド</div>
+          <div class="hd-sub">公式仕様から逆算する、損をしない支払い術</div>
         </div>
-      </div>
-      <div class="nav-links">
-        <a href="#summary" class="nav-link">📌 要点サマリ</a>
-        <a href="#conv" class="nav-link">🏪 コンビニ</a>
-        <a href="#eatout" class="nav-link">🍣 外食</a>
-        <a href="#net" class="nav-link">🛒 ネット決済</a>
-      </div>
-    </nav>
-  </header>
-
-  <div class="page">
-    <main>
-      <section class="hero" id="summary">
-        <div class="hero-text">
-          <div class="hero-pill">
-            <span class="hero-pill-badge"></span>
-            dカード PLATINUM 前提の「制度ガチ寄せ」設計
-          </div>
-          <h1 class="hero-title">結論：実店舗は d払い、ネットはクレカが基本解</h1>
-          <p class="hero-subtitle">
-            d払い・dカード・iD は「どれが一番トクか？」が直感では分かりにくい設計です。ここでは
-            <strong>公式仕様ベース</strong>で、
-            <strong>どの場面で何を使うのが合理的か</strong>を整理しています。
-          </p>
-          <div class="hero-highlight">
-            <span class="hero-tag">前提カード：dカード PLATINUM</span>
-            <span class="hero-tag">年間利用額特典：100万円ごとに1万円（実質＋1%）</span>
-            <span class="hero-tag">d払いの支払い方法：dカードに設定済み</span>
-          </div>
-          <div class="hero-math">
-            <strong>基本構造：</strong><br>
-            ・dカード決済（iD含む）＝1.0%＋年間利用額特典1.0%→実質2.0%<br>
-            ・d払い（街のお店）＝0.5%＋dカード1.0%＋年間利用額特典1.0%→実質2.5%<br>
-            ・dポイント加盟店なら、さらに提示分（0.5〜1.0%）が上乗せ
-          </div>
-          <p class="hero-note">
-            このページは「どの店で何を使うか」を迷わないための
-            <strong>実務用チートシート</strong>として使えます。
-          </p>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-orbit"></div>
-          <div class="hero-cards">
-            <div class="chip-row">
-              <div class="chip">
-                <span class="chip-dot"></span>
-                実店舗：d払い（支払い方法＝dカード）が基本
-              </div>
-              <div class="chip">
-                ネット：d払いは原則使わず、クレカ（dカード）直払い
-              </div>
-            </div>
-
-            <div class="card-mini">
-              <div>
-                <div class="card-mini-title">コンビニ3社の最適解</div>
-                <div class="badge">
-                  <strong>ローソン・ファミマ・セブン</strong>はすべて d払い優位
-                </div>
-                <ul class="list" style="margin-top:6px;">
-                  <li>ローソン：最大 実質3.0%</li>
-                  <li>ファミマ：実質3.0%</li>
-                  <li>セブン：実質2.5%</li>
-                </ul>
-              </div>
-              <div>
-                <div class="pill-math">
-                  <strong>d払い（dカード設定）</strong><br>
-                  0.5%+1.0%+1.0%=<strong>2.5%</strong><br>
-                  ＋加盟店なら提示分0.5〜1.0%
-                </div>
-              </div>
-            </div>
-
-            <div class="card-mini">
-              <div>
-                <div class="card-mini-title">iD が勝つのはどんな時？</div>
-                <ul class="list">
-                  <li>① d払いが使えない実店舗</li>
-                  <li>② d払いが携帯料金合算払いに強制されるネット決済</li>
-                </ul>
-              </div>
-              <div>
-                <div class="pill-math">
-                  <strong>iD（dカードタッチ）</strong><br>
-                  1.0%+1.0%=<strong>2.0%</strong><br>
-                  「悪くないが最適ではない」が基本
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="conv">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="mark"></span>
-            コンビニ3社：ローソン・ファミマ・セブン
-          </h2>
-          <p class="section-sub">
-            ここが日常支出のボリュームゾーン。
-            <strong>「d払い＋dカード＋（あれば）dポイント提示」</strong>が基本パターンです。
-          </p>
-        </div>
-
-        <div class="table-wrapper" style="margin-bottom:14px;">
-          <table>
-            <thead>
-              <tr>
-                <th>店舗</th>
-                <th>加盟状況</th>
-                <th>最適決済</th>
-                <th>実質還元率</th>
-                <th>内訳</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ローソン</td>
-                <td><span class="tag tag-good">dポイント加盟店</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>最大 約3.0%</td>
-                <td>d払い0.5%＋dカード1.0%＋年間利用額特典1.0%＋dポイント提示0.5〜1.0%</td>
-              </tr>
-              <tr>
-                <td>ファミリーマート</td>
-                <td><span class="tag tag-good">dポイント加盟店</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>約3.0%</td>
-                <td>d払い0.5%＋dカード1.0%＋年間利用額特典1.0%＋dポイント提示0.5%</td>
-              </tr>
-              <tr>
-                <td>セブンイレブン</td>
-                <td><span class="tag tag-danger">dポイント非加盟店</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>約2.5%</td>
-                <td>d払い0.5%＋dカード1.0%＋年間利用額特典1.0%（提示なし）</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">
-                ローソン・ファミマでの立ち回り
-                <span class="card-title-pill">「提示＋d払い＋dカード」の3段積み</span>
-              </div>
-            </div>
-            <div class="card-body">
-              <ul class="list">
-                <li><strong>d払いアプリに dポイントカードを連携</strong>しておくと、提示を自動化できる。</li>
-                <li>支払い方法は必ず<strong>dカード</strong>に設定（携帯料金合算払いはNG）。</li>
-                <li>iD や dカード単体払いでも「損ではない」が、<strong>常に d払いの方が＋0.5%以上有利</strong>。</li>
-              </ul>
-              <div class="pill-row">
-                <span class="pill pill-strong">ローソン・ファミマ：d払い（dカード）一択でよい</span>
-                <span class="pill">iD は「d払いが使えない時の保険」として考える</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">
-                セブンイレブンでの立ち回り
-                <span class="card-title-pill">「dポイント提示なし」前提</span>
-              </div>
-            </div>
-            <div class="card-body">
-              <ul class="list">
-                <li>セブンは dポイント加盟店ではないため、<strong>dポイントカード提示は無意味</strong>。</li>
-                <li>それでも<strong>d払い（支払い方法＝dカード）</strong>にすると、実質2.5%還元。</li>
-                <li>iD・dカード単体払いは実質2.0%なので、<strong>常に d払いが0.5%有利</strong>。</li>
-              </ul>
-              <div class="pill-row">
-                <span class="pill pill-strong">セブン：d払い（dカード）＞ iD ＝ dカード</span>
-                <span class="pill pill-bad">携帯料金合算払いになっていたら即修正</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="eatout">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="mark"></span>
-            外食チェーン：吉野家・スシローなど
-          </h2>
-          <p class="section-sub">
-            dポイント加盟店かどうかで構造は変わりますが、
-            <strong>「d払い（支払い方法＝dカード）」が基本的に最適</strong>という結論は変わりません。
-          </p>
-        </div>
-
-        <div class="table-wrapper" style="margin-bottom:14px;">
-          <table>
-            <thead>
-              <tr>
-                <th>店舗</th>
-                <th>加盟状況</th>
-                <th>最適決済</th>
-                <th>実質還元率</th>
-                <th>コメント</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>吉野家</td>
-                <td><span class="tag tag-danger">dポイント非加盟店</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>約2.5%</td>
-                <td>提示分はないが、d払い0.5%分だけ iD／dカードより有利。</td>
-              </tr>
-              <tr>
-                <td>スシロー</td>
-                <td><span class="tag">dポイント非加盟店</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>約2.5%</td>
-                <td>構造は吉野家と同じ。iD は実質2.0%で一歩劣る。</td>
-              </tr>
-              <tr>
-                <td>その他チェーン（d払い対応）</td>
-                <td><span class="tag">加盟状況は店舗ごと</span></td>
-                <td><span class="tag tag-strong">d払い（支払い方法＝dカード）</span></td>
-                <td>2.5%＋加盟店なら提示分</td>
-                <td>「d払いが使えるなら d払い優先」が基本ルール。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <article class="card">
-          <div class="card-header">
-            <div class="card-title">
-              iD を使うべき場面（外食・実店舗）
-              <span class="card-title-pill">「d払いが使えない店」専用と割り切る</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <ul class="list">
-              <li><strong>iD が d払いより有利になるのは、制度上ほぼ存在しない。</strong></li>
-              <li>例外は「そもそも d払いが使えない店」だけ（個人店・一部スーパー・病院など）。</li>
-              <li>その場合、iD（＝dカードタッチ）で<strong>実質2.0%</strong>還元を確保するのが現実的な最適解。</li>
-            </ul>
-            <div class="pill-row">
-              <span class="pill pill-strong">ルール：d払いが使えない → iD（dカードタッチ）</span>
-              <span class="pill">d払いが使える → 常に d払い（dカード設定）が上</span>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" id="net">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="mark"></span>
-            ネットショッピング・オンライン決済
-          </h2>
-          <p class="section-sub">
-            ここは<strong>「携帯料金合算払いに強制されるかどうか」</strong>が最大の落とし穴です。原則として
-            <strong>d払いは使わず、dカードで直接クレカ決済</strong>するのが正解になります。
-          </p>
-        </div>
-
-        <div class="table-wrapper" style="margin-bottom:14px;">
-          <table>
-            <thead>
-              <tr>
-                <th>サービス</th>
-                <th>d払いの挙動</th>
-                <th>推奨決済</th>
-                <th>理由</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Amazon</td>
-                <td><span class="tag tag-danger">携帯料金合算払いに強制</span></td>
-                <td><span class="tag tag-strong">dカードで直接クレカ決済</span></td>
-                <td>d払いだと0.5%＋年間利用額対象外。クレカなら1.0%＋年間利用額特典1.0%→実質2.0%。</td>
-              </tr>
-              <tr>
-                <td>ユニクロオンライン</td>
-                <td><span class="tag tag-danger">携帯料金合算払いになりやすい</span></td>
-                <td><span class="tag tag-strong">dカードで直接クレカ決済</span></td>
-                <td>Amazonと同様。d払いは「0.5%＋合算払い」の罠になりやすい。</td>
-              </tr>
-              <tr>
-                <td>ソニーストア</td>
-                <td><span class="tag tag-danger">携帯料金合算払いに強制されやすい</span></td>
-                <td><span class="tag tag-strong">dカードで直接クレカ決済</span></td>
-                <td>高額決済が多いので、年間利用額特典の有無が将来の差に直結。</td>
-              </tr>
-              <tr>
-                <td>GO（タクシー）</td>
-                <td><span class="tag tag-danger">d払い＝携帯料金合算扱い</span></td>
-                <td><span class="tag tag-strong">dカード登録でクレカ決済</span></td>
-                <td>クレカにすると1.0%＋年間利用額特典1.0%→実質2.0%。</td>
-              </tr>
-              <tr>
-                <td>Coke ON</td>
-                <td><span class="tag tag-danger">d払い＝携帯料金合算扱い</span></td>
-                <td><span class="tag tag-strong">dカード登録でクレカ決済</span></td>
-                <td>少額でも積み上がるので、年間利用額に乗せておく価値がある。</td>
-              </tr>
-              <tr>
-                <td>その他のネットショップ</td>
-                <td><span class="tag">d払いの挙動はサービスごとに異なる</span></td>
-                <td><span class="tag tag-strong">dカードで直接クレカ決済</span></td>
-                <td>迷ったら「d払いは使わず dカード直払い」が制度的に最も安全。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <img src="https://www.f-counter.net/j/67/1771680700/" alt="counter">
-      <div>本ページは公開情報・公式仕様をもとに、個人が独自に整理した非公式まとめです。</div>
-      <div class="foot-note">
-        参考：dカード会員規約／d払い利用規約／iD公式情報／dポイントクラブ規約 など<br>
-        情報は将来変更される可能性があります。最新の条件は必ず公式サイトをご確認ください。
-      </div>
-
-      <!-- アクセスカウンター表示 -->
-      <div class="counter-wrapper" aria-label="アクセスカウンター">
-        <span>このページの累計アクセス（ブラウザ単位・簡易カウント）：</span>
-        <span class="counter-badge" id="page-view-counter">-</span>
-      </div>
-    </footer>
+      </a>
+      <nav class="hd-nav" aria-label="ページ内ナビゲーション">
+        <a href="#structure">仕組み</a>
+        <a href="#formula">計算式</a>
+        <a href="#conveni">コンビニ</a>
+        <a href="#restaurant">外食</a>
+        <a href="#online">ネット</a>
+        <a href="#other">その他</a>
+        <a href="#setup">設定</a>
+        <a href="#mistakes">失敗例</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
   </div>
+</header>
 
+<!-- ===== MAIN ===== -->
+<main id="main">
+  <div class="wrap">
 
-  <!-- =========================
-       アクセスカウンター（JSのみ）
-       ・localStorage に保存
-       ・ブラウザごとの簡易PVカウント
-  ========================== -->
-  <script>
-    (function () {
-      var KEY = "dpay_dcard_id_guide_page_views";
-      var current = 0;
-      try {
-        var stored = localStorage.getItem(KEY);
-        if (stored !== null) {
-          var parsed = parseInt(stored, 10);
-          if (!isNaN(parsed) && parsed >= 0) {
-            current = parsed;
-          }
-        }
-        current += 1;
-        localStorage.setItem(KEY, String(current));
-      } catch (e) {
-        // localStorage が使えない場合は 1 として表示
-        current = 1;
-      }
+    <!-- パンくず -->
+    <nav aria-label="パンくずリスト">
+      <ol class="bc" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://axlrose1202.github.io/dpay-guide/" itemprop="item"><span itemprop="name">ホーム</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <span aria-hidden="true">›</span>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">d払い・dカード・iD 実務ガイド</span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ol>
+    </nav>
 
-      var el = document.getElementById("page-view-counter");
-      if (el) {
-        el.textContent = current.toLocaleString("ja-JP");
-      }
-    })();
-  </script>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero-eyebrow">
+        <span class="hero-dot" aria-hidden="true"></span>
+        2026年2月28日更新 ｜ dカード PLATINUM 公式仕様ベース
+      </div>
+      <div class="upd">📅 最終更新：2026年2月28日（2026年2月の仕様変更を反映）</div>
+      <h1 id="h1">
+        d払い・dカード・iD<br>
+        <em>使い分けの全論点</em>【2026年版】<br>
+        <span style="font-size:0.6em;color:var(--muted);">公式仕様を分解し、全シーンで最も得する支払い方法を示す</span>
+      </h1>
+      <p class="hero-desc">
+        「d払いとiDってどう違う？」「dカードで直接払うのと比べてどちらが得か？」——この問いに正確に答えるには、ドコモの決済システムの仕様を数字レベルで把握する必要があります。
+        本ガイドは<strong>公式仕様を一次情報として参照し</strong>、コンビニ・外食・ネット・タクシーなど全シーンで合理的な支払い選択ができるよう整理したものです。
+        <strong>2026年2月の仕様変更（公共料金還元率半減）</strong>も反映しています。
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">🎯 前提：dカード PLATINUM 保有者向け</div>
+        <div class="hero-meta-item">📖 読了目安：約12分</div>
+        <div class="hero-meta-item">⚠️ 情報は将来変更の可能性あり・公式サイト要確認</div>
+      </div>
+    </section>
+
+    <!-- 仕様変更アラート -->
+    <div class="alert-banner" role="alert" aria-label="2026年の仕様変更情報">
+      <div class="alert-banner-title">⚠️ 2026年の主な仕様変更（要確認）</div>
+      <ul>
+        <li><strong>2026年2月1日〜：</strong>dカードによる電気・ガス・水道・eLTAX（地方税）の支払いポイント還元が、<strong>100円→1pt から 200円→1pt に半減</strong>（実質0.5%還元）</li>
+        <li><strong>2025年8月26日〜：</strong>d払いで電話料金合算払いに dカード以外のクレカを設定している場合、dポイント進呈対象外に変更</li>
+        <li><strong>dカードGOLD 年間利用額特典：</strong>2025年配布分から100万円利用で1万円に変更（以前は200万円で2万円の2段階）</li>
+      </ul>
+    </div>
+
+    <!-- KEY FIGURES -->
+    <div class="figures" role="region" aria-label="主要数値サマリ">
+      <div class="fig">
+        <div class="fig-num">3.0%〜</div>
+        <div class="fig-label">コンビニ（ローソン等）での最大還元率</div>
+      </div>
+      <div class="fig">
+        <div class="fig-num">2.5%</div>
+        <div class="fig-label">d払い（dカード設定）の基本還元率</div>
+      </div>
+      <div class="fig">
+        <div class="fig-num">2.0%</div>
+        <div class="fig-label">iD・dカード直払いの基本還元率</div>
+      </div>
+      <div class="fig">
+        <div class="fig-num">0.5%</div>
+        <div class="fig-label">合算払い時の還元率（最低値）</div>
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="目次">
+      <div class="toc-title">目次</div>
+      <ol class="toc-list" role="list">
+        <li><a href="#structure">d払い・dカード・iDの仕組みを分解する</a></li>
+        <li><a href="#formula">還元率の計算構造と全パターン</a></li>
+        <li><a href="#conveni">コンビニ3社（ローソン・ファミマ・セブン）</a></li>
+        <li><a href="#restaurant">外食チェーン 各店の対応状況と注意点</a></li>
+        <li><a href="#online">ネットショッピング・オンライン決済の罠</a></li>
+        <li><a href="#other">その他シーン（タクシー・ドラッグストア・スーパー等）</a></li>
+        <li><a href="#comparison">全シーン比較マトリクス</a></li>
+        <li><a href="#setup">還元率最大化の設定手順</a></li>
+        <li><a href="#mistakes">よくある損のパターン10選</a></li>
+        <li><a href="#advanced">応用：ポイント積み上げの上位戦略</a></li>
+        <li><a href="#faq">よくある質問（FAQ）</a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== ARTICLE ===== -->
+    <article class="art" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="d払い・dカード・iD 使い分けの全論点【2026年版】">
+      <meta itemprop="datePublished" content="2025-01-01">
+      <meta itemprop="dateModified" content="2026-02-28">
+      <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="axlrose1202">
+      </div>
+
+      <!-- 01 仕組み -->
+      <section id="structure" class="sec" aria-labelledby="h-structure">
+        <div class="sec-head">
+          <span class="sec-n">01</span>
+          <div>
+            <h2 id="h-structure">d払い・dカード・iDの仕組みを分解する</h2>
+            <p class="sec-desc">「何となく使っている」から脱するための基礎知識</p>
+          </div>
+        </div>
+
+        <p class="prose">3つの決済は異なる技術レイヤーに属しています。これを正確に把握することが、還元率最大化の前提です。</p>
+
+        <div class="cg">
+          <article class="card" aria-labelledby="c-dpay">
+            <div class="card-title" id="c-dpay">📱 d払い（QRコード決済）</div>
+            <div class="card-body">
+              スマートフォンのアプリが生成するバーコード／QRコードを読み取る決済方式。FeliCa非対応の旧端末でも使える。
+              <ul>
+                <li>通信方式：バーコード／QR</li>
+                <li>支払い元：dカード または 携帯料金合算払いを選択可</li>
+                <li>d払い独自ポイント：0.5%（200円で1pt）</li>
+                <li><strong>支払い方法の設定が還元率を左右する最重要項目</strong></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="c-id">
+            <div class="card-title" id="c-id">💳 iD（FeliCa非接触IC決済）</div>
+            <div class="card-body">
+              dカードに内蔵されたFeliCaチップ、またはApple Pay／Google Pay経由で使うNFC決済。端末をかざすだけで支払える。
+              <ul>
+                <li>通信方式：FeliCa（NFC Type-F）</li>
+                <li>支払い元：dカードと直結（合算払い不可）</li>
+                <li>ポイント：dカード分1.0%のみ</li>
+                <li><strong>d払い非対応店舗での実質的な代替手段</strong></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card" aria-labelledby="c-dcard">
+            <div class="card-title" id="c-dcard">🏦 dカード直払い（クレジット）</div>
+            <div class="card-body">
+              物理カードまたはネット入力でdカードをクレジットカードとして直接使う決済。ネット決済での基本形。
+              <ul>
+                <li>通信方式：磁気／ICチップ／ネット入力</li>
+                <li>ポイント：dカード分1.0%</li>
+                <li>年間利用額特典：対象</li>
+                <li><strong>ネットでの合算払い回避に最も確実な方法</strong></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="co co-blue">
+          <div class="co-title">💡 d払いの核心：支払い方法の設定がすべてを決める</div>
+          d払いは「決済の窓口」に過ぎません。その裏にある<strong>支払い方法（dカード or 携帯料金合算払い）</strong>によって得られるポイントが大きく変わります。dカード設定にするとd払いポイント＋dカードポイントの二重取りになり、合算払いのままではdカードポイントがゼロになります。この1点を理解するだけで、多くの損失を回避できます。
+        </div>
+
+        <h3>dカード PLATINUM の特典構造（2026年2月時点）</h3>
+        <div class="cg">
+          <div class="card">
+            <div class="card-title">💰 基本還元率：1.0%</div>
+            <div class="card-body">全決済に適用。100円につき1ポイント。dポイントはdポイント加盟店・d払いで1pt＝1円として使用可能。ポイントの有効期限は進呈日から48か月（通常ポイントの場合）。</div>
+          </div>
+          <div class="card">
+            <div class="card-title">🎁 年間利用額特典：最大4万円相当</div>
+            <div class="card-body">
+              年間利用額に応じてクーポンが付与されます（12月16日〜翌年12月15日集計）。
+              <ul>
+                <li>100万円：1万円分</li>
+                <li>200万円：2万円分</li>
+                <li>300万円：3万円分</li>
+                <li>400万円：4万円分（最大）</li>
+              </ul>
+              <strong>携帯料金合算払い・キャッシング・dカード積立は対象外。</strong>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🔖 dポイント加盟店提示特典</div>
+            <div class="card-body">ローソン・ファミマ等のdポイント加盟店でdポイントカードを提示すると0.5〜1.0%の追加ポイント。d払いアプリにdポイントカードを連携すれば<strong>自動提示</strong>で手間いらず。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 計算式 -->
+      <section id="formula" class="sec" aria-labelledby="h-formula">
+        <div class="sec-head">
+          <span class="sec-n">02</span>
+          <div>
+            <h2 id="h-formula">還元率の計算構造と全パターン</h2>
+            <p class="sec-desc">どの組み合わせが何%になるかを完全整理</p>
+          </div>
+        </div>
+
+        <div class="co co-amber">
+          <div class="co-title">⚠️ 前提条件</div>
+          以下の計算はすべて<strong>dカードPLATINUMを保有し、年間利用額が100万円以上</strong>の場合の実質還元率です。年間100万円未満の場合は年間利用額特典（+1.0%相当）が加算されないため、各パターンから-1.0%した値が実際の還元率になります。
+        </div>
+
+        <div class="formula" role="region" aria-label="還元率計算式一覧">
+          <div class="fl">
+            <span class="fl-label">① d払い（dカード）＋dポイント提示（加盟店1.0%）</span>
+            <span class="fl-eq">= 0.5 + 0.5 + 1.0 + 1.0</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--green)">3.0%</span>
+          </div>
+          <div class="fl">
+            <span class="fl-label">② d払い（dカード）のみ（非加盟店）</span>
+            <span class="fl-eq">= 0.5 + 0.5 + 1.0</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--green)">2.5%</span>
+          </div>
+          <div class="fl">
+            <span class="fl-label">③ iD（dカードタッチ）</span>
+            <span class="fl-eq">= 1.0 + 1.0</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--amber)">2.0%</span>
+          </div>
+          <div class="fl">
+            <span class="fl-label">④ dカード直払い（クレジット）</span>
+            <span class="fl-eq">= 1.0 + 1.0</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--amber)">2.0%</span>
+          </div>
+          <div class="fl">
+            <span class="fl-label">⑤ d払い（携帯料金合算払い）</span>
+            <span class="fl-eq">= 0.5のみ</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--red)">0.5% ⚠️</span>
+          </div>
+          <div class="fl">
+            <span class="fl-label">⑥ dカード 公共料金払い（2026年2月1日〜）</span>
+            <span class="fl-eq">= 0.5 + 1.0</span>
+            <span class="fl-eq">=</span>
+            <span class="fl-total" style="color:var(--amber)">1.5%（改悪後）</span>
+          </div>
+          <span class="fl-note">
+            ※ d払い基本0.5% ／ dカード支払い特典0.5%（合計1.0%） ／ dカードポイント1.0% ／ 年間利用額特典1.0%相当 ／ dポイント加盟店提示0.5〜1.0%<br>
+            ※ ②の「d払い（dカード）」は d払い基本0.5% ＋ dカード支払い特典0.5% ＝ 合計1.0%（d払い部分）に dカードポイント1.0% ＋ 年間利用額特典1.0% を加算した値
+          </span>
+        </div>
+
+        <div class="co co-red">
+          <div class="co-title">🚨 合算払い放置の年間損失額試算</div>
+          月3万円をd払い（合算払い）で使い続けると、dカード設定と比べた差は月600ポイント（月3万×2.0%差）。<strong>年間7,200ポイントの損失</strong>になります。dカードPLATINUMの年会費29,700円の約4分の1に相当します。設定1つで取り返せる差です。
+        </div>
+      </section>
+
+      <!-- 03 コンビニ -->
+      <section id="conveni" class="sec" aria-labelledby="h-conveni">
+        <div class="sec-head">
+          <span class="sec-n">03</span>
+          <div>
+            <h2 id="h-conveni">コンビニ3社（ローソン・ファミリーマート・セブンイレブン）</h2>
+            <p class="sec-desc">日常の最頻出シーン。0.5%の差が年単位で効いてくる</p>
+          </div>
+        </div>
+
+        <div class="sg">
+          <div class="sc">
+            <div class="sc-store">🏪 ローソン</div>
+            <div class="sc-method">d払い（dカード）＋dポイント提示</div>
+            <div class="sc-rate">3.0%</div>
+            <div class="sc-unit">実質還元率</div>
+            <div class="sc-break">
+              d払い（dカード）：1.0%<br>
+              年間利用額特典：1.0%<br>
+              dポイント提示（加盟店）：1.0%<br>
+              <strong>合計：3.0%</strong>
+            </div>
+          </div>
+          <div class="sc">
+            <div class="sc-store">🏪 ファミマ</div>
+            <div class="sc-method">d払い（dカード）＋dポイント提示</div>
+            <div class="sc-rate">3.0%</div>
+            <div class="sc-unit">実質還元率</div>
+            <div class="sc-break">
+              d払い（dカード）：1.0%<br>
+              年間利用額特典：1.0%<br>
+              dポイント提示（加盟店）：1.0%<br>
+              <strong>合計：3.0%</strong>
+            </div>
+          </div>
+          <div class="sc">
+            <div class="sc-store">🏪 セブン</div>
+            <div class="sc-method">d払い（dカード）のみ</div>
+            <div class="sc-rate">2.5%</div>
+            <div class="sc-unit">実質還元率</div>
+            <div class="sc-break">
+              d払い（dカード）：1.0%<br>
+              年間利用額特典：1.0%<br>
+              dポイント提示：0%（非加盟店）<br>
+              <strong>合計：2.5%</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="tw">
+          <table>
+            <caption>コンビニ3社：決済方法別 実質還元率（dカードPLATINUM・年間100万円以上利用）</caption>
+            <thead>
+              <tr>
+                <th scope="col">決済方法</th>
+                <th scope="col">ローソン</th>
+                <th scope="col">ファミマ</th>
+                <th scope="col">セブン</th>
+                <th scope="col">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>d払い（dカード）＋dPt提示</strong></td>
+                <td><span class="rt-hi">3.0%</span></td>
+                <td><span class="rt-hi">3.0%</span></td>
+                <td><span class="rt-md">2.5%</span>（提示無効）</td>
+                <td>最高値。dPt提示を忘れずに</td>
+              </tr>
+              <tr>
+                <td><strong>d払い（dカード）のみ</strong></td>
+                <td><span class="rt-md">2.5%</span></td>
+                <td><span class="rt-md">2.5%</span></td>
+                <td><span class="rt-md">2.5%</span></td>
+                <td>提示を忘れた場合の実態値</td>
+              </tr>
+              <tr>
+                <td><strong>iD（dカードタッチ）</strong></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td>d払いより常に0.5%低い</td>
+              </tr>
+              <tr>
+                <td><strong>dカード直払い（クレジット）</strong></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td><span class="rt-lo">2.0%</span></td>
+                <td>iDと同率。コンビニでは非推奨</td>
+              </tr>
+              <tr>
+                <td><strong>d払い（合算払い）</strong></td>
+                <td><span class="rt-ng">0.5% ⚠️</span></td>
+                <td><span class="rt-ng">0.5% ⚠️</span></td>
+                <td><span class="rt-ng">0.5% ⚠️</span></td>
+                <td>最低値。即設定変更を</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="co co-green">
+          <div class="co-title">✅ コンビニでの行動指針</div>
+          <strong>ローソン・ファミマ：</strong>d払いアプリのバーコードを提示（dポイントカード連携済みなら同時提示）→ d払い（dカード設定）で決済。これで3.0%を確保。<br>
+          <strong>セブンイレブン：</strong>dポイントカード提示は不要（非加盟のためポイントがつかない）。d払い（dカード設定）で決済するだけで2.5%。iDで決済した場合は2.0%なので0.5%の差が生じる。
+        </div>
+      </section>
+
+      <!-- 04 外食 -->
+      <section id="restaurant" class="sec" aria-labelledby="h-restaurant">
+        <div class="sec-head">
+          <span class="sec-n">04</span>
+          <div>
+            <h2 id="h-restaurant">外食チェーン 各店の対応状況と注意点</h2>
+            <p class="sec-desc">店ごとにd払い対応状況が異なる。誤情報で恥をかく前に確認</p>
+          </div>
+        </div>
+
+        <div class="co co-red">
+          <div class="co-title">🚨 マクドナルドについての重要訂正</div>
+          マクドナルドの<strong>店頭レジではQRコードによるd払いは使用不可</strong>です。d払いが使えるのはマクドナルド公式アプリの<strong>モバイルオーダー経由のみ</strong>（ドライブスルー含む）。店頭ではiD（dカードタッチ）等の電子マネーが利用可能です。
+        </div>
+
+        <div class="co co-red">
+          <div class="co-title">🚨 イオン・すき家について</div>
+          <strong>イオン（イオン本体）はd払い非対応</strong>です（2026年2月時点）。同様に<strong>すき家もd払い非対応</strong>です。吉野家・松屋はd払い対応、すき家は非対応という違いを混同しないよう注意してください。
+        </div>
+
+        <div class="tw">
+          <table>
+            <caption>主要外食チェーン：d払い対応状況・dポイント加盟状況と推奨決済（2026年2月時点）</caption>
+            <thead>
+              <tr>
+                <th scope="col">チェーン名</th>
+                <th scope="col">d払い（QR）</th>
+                <th scope="col">iD</th>
+                <th scope="col">dPt加盟</th>
+                <th scope="col">推奨決済</th>
+                <th scope="col">実質還元率</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>吉野家</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>松屋</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>すき家</strong></td>
+                <td><span class="b b-red">非対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>iD（dカードタッチ）</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>スシロー</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>くら寿司</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>はま寿司</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ガスト（すかいらーく）</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>バーミヤン（すかいらーく）</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>マクドナルド</strong></td>
+                <td><span class="b b-amber">モバイルオーダーのみ</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>店頭：iD ／ モバイルオーダー：d払い</td>
+                <td><span class="rt-lo">2.0%〜</span></td>
+              </tr>
+              <tr>
+                <td><strong>ケンタッキー</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>モスバーガー</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ドミノ・ピザ</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ミライザカ・和民（ワタミ）</strong></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-green">対応</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%</span></td>
+              </tr>
+              <tr>
+                <td><strong>d払い非対応の個人店</strong></td>
+                <td><span class="b b-red">非対応</span></td>
+                <td><span class="b b-amber">店舗による</span></td>
+                <td><span class="b b-gray">非加盟</span></td>
+                <td>iD（dカードタッチ）または物理カード</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="co co-blue">
+          <div class="co-title">💡 d払い対応かどうかを事前に確認する方法</div>
+          d払いアプリ下部の「お店を探す」から店名・現在地で検索できます。よく行くチェーン店は一度確認してリストを作っておくと毎回迷いません。店頭ではレジ周辺・入口の「d払い」ステッカーでも判断できます。
+        </div>
+      </section>
+
+      <!-- 05 ネット -->
+      <section id="online" class="sec" aria-labelledby="h-online">
+        <div class="sec-head">
+          <span class="sec-n">05</span>
+          <div>
+            <h2 id="h-online">ネットショッピング・オンライン決済の罠</h2>
+            <p class="sec-desc">「d払い＝得」は実店舗限定。ネットでは逆転するケースが多い</p>
+          </div>
+        </div>
+
+        <div class="co co-red">
+          <div class="co-title">🚨 ネットでのd払いが危険な理由</div>
+          多くのネットショッピングサービスでは、d払いを選択すると<strong>d払いアプリの「支払い方法＝dカード」設定に関わらず、携帯料金合算払いに強制変換</strong>されます。サービス側の実装によるものであり、ユーザー設定が上書きされます。結果としてd払いポイント0.5%しか得られません。ネットでは原則としてdカードをクレジットカードとして直接登録して決済することを推奨します。
+        </div>
+
+        <div class="tw">
+          <table>
+            <caption>主要ネットサービス：d払いの挙動と推奨決済方法（2026年2月時点）</caption>
+            <thead>
+              <tr>
+                <th scope="col">サービス</th>
+                <th scope="col">d払いの挙動</th>
+                <th scope="col">推奨決済</th>
+                <th scope="col">推奨時の還元率</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Amazon</strong></td>
+                <td><span class="b b-red">合算払いに強制</span></td>
+                <td>dカード直払い（クレジット）</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ユニクロ オンライン</strong></td>
+                <td><span class="b b-red">合算払いになりやすい</span></td>
+                <td>dカード直払い</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ソニーストア</strong></td>
+                <td><span class="b b-red">合算払いに強制</span></td>
+                <td>dカード直払い</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>ニトリ オンライン</strong></td>
+                <td><span class="b b-amber">要確認</span></td>
+                <td>dカード直払い</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>GO（タクシー）</strong></td>
+                <td><span class="b b-red">合算払い扱い確定</span></td>
+                <td>dカードをクレカとして登録</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Coke ON（自販機）</strong></td>
+                <td><span class="b b-red">合算払い扱い</span></td>
+                <td>dカードをクレカとして登録</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+              <tr>
+                <td><strong>dショッピング</strong></td>
+                <td><span class="b b-green">dカード設定が有効</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%〜</span></td>
+              </tr>
+              <tr>
+                <td><strong>dマーケット各種</strong></td>
+                <td><span class="b b-green">dカード設定が有効</span></td>
+                <td>d払い（dカード）</td>
+                <td><span class="rt-md">2.5%〜</span></td>
+              </tr>
+              <tr>
+                <td><strong>出前館</strong></td>
+                <td><span class="b b-amber">要確認</span></td>
+                <td>dカード直払い</td>
+                <td><span class="rt-lo">2.0%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="co co-blue">
+          <div class="co-title">💡 合算払いになっていないか確認する方法</div>
+          決済後にd払いアプリの利用履歴を開き、個別取引の「お支払い方法」欄を確認してください。<strong>「dカード」表示なら正常、「電話料金合算払い」「dケータイ払いplus」表示なら合算払いになっています。</strong>ネットサービスで初めてd払いを使った際は必ず翌日に確認する習慣をつけることを推奨します。
+        </div>
+      </section>
+
+      <!-- 06 その他 -->
+      <section id="other" class="sec" aria-labelledby="h-other">
+        <div class="sec-head">
+          <span class="sec-n">06</span>
+          <div>
+            <h2 id="h-other">その他のシーン（タクシー・ドラッグストア・スーパー・ガソリンスタンド等）</h2>
+            <p class="sec-desc">見落としがちなシーンの整理</p>
+          </div>
+        </div>
+
+        <div class="cg">
+          <div class="card">
+            <div class="card-title">🚕 タクシー（GOアプリ）</div>
+            <div class="card-body">
+              <strong>d払いは使わずdカードをクレカ登録して決済。</strong>GOでのd払いは合算払い扱い確定のため0.5%しか入りません。GOアプリ設定→「お支払い方法」→「クレジットカード」でdカード番号を登録すれば2.0%確保。タクシーは1回の金額が大きいため設定の差が響きます。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">💊 ドラッグストア（マツキヨ・ウエルシア等）</div>
+            <div class="card-body">
+              マツモトキヨシはdポイント加盟店かつd払い対応。<strong>d払い（dカード）＋dポイント提示で3.0%</strong>（加盟店1.0%適用）。ウエルシアも対応。クスリのアオキはd払い対応だがdポイント非加盟のため2.5%。各店舗のdポイント加盟状況はd払いアプリで確認を。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🛒 スーパー（西友・イトーヨーカドー等）</div>
+            <div class="card-body">
+              西友・イトーヨーカドー・ヨークマートはd払い対応。<strong>d払い（dカード）で2.5%</strong>確保。<strong>イオン本体はd払い非対応</strong>（2026年2月時点）。イオン系では物理dカードのクレジット払い（2.0%）が現実的な上限。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">⛽ ガソリンスタンド</div>
+            <div class="card-body">
+              コスモ石油の一部店舗ではd払い対応（2024年1月より）。ENEOSはd払い非対応の店舗が多いためiD（2.0%）またはdカード直払いが基本。ビバホームは2024年9月よりd払い対応。対応状況はd払いアプリのお店検索で確認。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🏥 病院・クリニック</div>
+            <div class="card-body">
+              QR決済非対応の医療機関が多い。<strong>iD（dカードタッチ）が使えれば2.0%</strong>。iDも非対応なら物理dカードのクレジット払い（2.0%）。現金払いはポイントゼロなので、支払い前にiDの利用可否を確認する習慣が有効です。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🥤 自動販売機（Coke ON等）</div>
+            <div class="card-body">
+              Coke ONアプリのd払いは合算払い扱い。<strong>dカードをクレジットカードとして登録</strong>することで2.0%取れます。毎日の利用でも積み重なるため設定を見直す価値があります。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🏠 家具・ホームセンター</div>
+            <div class="card-body">
+              ニトリは2024年2月よりd払い対応（実店舗）。ビバホームは2024年9月より対応。コーナンはd払い対応。いずれもdポイント非加盟店のため2.5%（dカード設定時）。
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">📦 宅配・フードデリバリー</div>
+            <div class="card-body">
+              出前館はd払い対応。Uber Eatsはd払い非対応でクレカ直払い（2.0%）が基本。フードパンダもd払い非対応。デリバリー系はサービスごとに状況が異なるためアプリの支払い画面で都度確認を。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 マトリクス -->
+      <section id="comparison" class="sec" aria-labelledby="h-comparison">
+        <div class="sec-head">
+          <span class="sec-n">07</span>
+          <div>
+            <h2 id="h-comparison">全シーン比較マトリクス</h2>
+            <p class="sec-desc">一覧で判断できる総合比較（dカードPLATINUM・年間100万円以上利用前提）</p>
+          </div>
+        </div>
+
+        <div class="mw">
+          <table class="mx">
+            <caption>全決済方法×全シーン 還元率比較マトリクス</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="rl">シーン</th>
+                <th scope="col">d払い<br>（dカード）<br>+dPt提示</th>
+                <th scope="col">d払い<br>（dカード）<br>提示なし</th>
+                <th scope="col">iD<br>（dカード<br>タッチ）</th>
+                <th scope="col">dカード<br>直払い</th>
+                <th scope="col">d払い<br>（合算払い）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rl">ローソン</td>
+                <td class="best">3.0%★</td>
+                <td class="good">2.5%</td>
+                <td>2.0%</td>
+                <td>2.0%</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">ファミマ</td>
+                <td class="best">3.0%★</td>
+                <td class="good">2.5%</td>
+                <td>2.0%</td>
+                <td>2.0%</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">セブン</td>
+                <td class="best">2.5%★</td>
+                <td class="best">2.5%★</td>
+                <td>2.0%</td>
+                <td>2.0%</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">吉野家・松屋・スシロー等</td>
+                <td class="na">加盟店状況による</td>
+                <td class="best">2.5%★</td>
+                <td>2.0%</td>
+                <td>2.0%</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">すき家</td>
+                <td class="na">d払い非対応</td>
+                <td class="na">d払い非対応</td>
+                <td class="best">2.0%★</td>
+                <td class="best">2.0%★</td>
+                <td class="na">d払い非対応</td>
+              </tr>
+              <tr>
+                <td class="rl">マクドナルド（店頭）</td>
+                <td class="na">QR非対応</td>
+                <td class="na">QR非対応</td>
+                <td class="best">2.0%★</td>
+                <td class="best">2.0%★</td>
+                <td class="na">QR非対応</td>
+              </tr>
+              <tr>
+                <td class="rl">マクドナルド（モバイルオーダー）</td>
+                <td class="na">dPt非加盟</td>
+                <td class="best">2.5%★</td>
+                <td class="na">非対応</td>
+                <td>2.0%</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">Amazon</td>
+                <td class="bad">0.5%⚠（合算強制）</td>
+                <td class="bad">0.5%⚠（合算強制）</td>
+                <td class="na">非対応</td>
+                <td class="best">2.0%★</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">タクシー（GO）</td>
+                <td class="bad">0.5%⚠（合算強制）</td>
+                <td class="bad">0.5%⚠（合算強制）</td>
+                <td class="na">非対応</td>
+                <td class="best">2.0%★</td>
+                <td class="bad">0.5%⚠</td>
+              </tr>
+              <tr>
+                <td class="rl">イオン本体</td>
+                <td class="na">d払い非対応</td>
+                <td class="na">d払い非対応</td>
+                <td class="best">2.0%★</td>
+                <td class="best">2.0%★</td>
+                <td class="na">d払い非対応</td>
+              </tr>
+              <tr>
+                <td class="rl">病院・個人店</td>
+                <td class="na">多くが非対応</td>
+                <td class="na">多くが非対応</td>
+                <td class="best">2.0%★（対応店のみ）</td>
+                <td class="good">2.0%</td>
+                <td class="na">多くが非対応</td>
+              </tr>
+              <tr>
+                <td class="rl">公共料金（電気・ガス等）</td>
+                <td class="na">非対応</td>
+                <td class="na">非対応</td>
+                <td class="na">非対応</td>
+                <td class="good">1.5%（改悪後）</td>
+                <td class="na">非対応</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 08 設定 -->
+      <section id="setup" class="sec" aria-labelledby="h-setup">
+        <div class="sec-head">
+          <span class="sec-n">08</span>
+          <div>
+            <h2 id="h-setup">還元率最大化の設定手順（一度やれば完了）</h2>
+            <p class="sec-desc">この手順を済ませてしまえば、あとは意識しなくても最適運用になる</p>
+          </div>
+        </div>
+
+        <div class="steps" role="list" aria-label="設定手順">
+          <div class="step" role="listitem">
+            <div class="step-nw">
+              <div class="step-n" aria-label="ステップ1">1</div>
+              <div class="step-line" aria-hidden="true"></div>
+            </div>
+            <div class="step-body">
+              <div class="step-title">【最重要】d払いアプリの支払い方法を「dカード」に変更する</div>
+              <div class="step-desc">
+                d払いアプリを開く → 右下<strong>「メニュー」</strong> → 「お支払い方法」 → dカードを選択して確定。<br>
+                トップ画面のバーコード下に<strong>「dカード（末尾xxxx）」</strong>と表示されれば設定完了。「電話料金合算払い」と表示されている場合はこの手順が未完了です。これだけで還元率が0.5%から2.5%に上がります。
+              </div>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-nw">
+              <div class="step-n" aria-label="ステップ2">2</div>
+              <div class="step-line" aria-hidden="true"></div>
+            </div>
+            <div class="step-body">
+              <div class="step-title">dポイントカードをd払いアプリと連携する</div>
+              <div class="step-desc">
+                d払いアプリ内の「dポイントカード」設定からカード情報を入力して連携。<br>
+                連携後は<strong>d払いのバーコードとdポイントカードが1画面で同時表示</strong>されます。ローソン・ファミマでの提示忘れがゼロになります。
+              </div>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-nw">
+              <div class="step-n" aria-label="ステップ3">3</div>
+              <div class="step-line" aria-hidden="true"></div>
+            </div>
+            <div class="step-body">
+              <div class="step-title">Apple Pay / Google PayにiD（dカード）を登録する</div>
+              <div class="step-desc">
+                ウォレットアプリまたはGoogle PayにdカードをiDとして追加。<br>
+                <strong>d払いが使えない店舗での即時切り替えが可能</strong>になります。物理カードを取り出す手間なくスマホタッチで決済できます。FeliCa搭載端末（iPhone 7以降・FeliCa対応Android）が必要です。
+              </div>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-nw">
+              <div class="step-n" aria-label="ステップ4">4</div>
+              <div class="step-line" aria-hidden="true"></div>
+            </div>
+            <div class="step-body">
+              <div class="step-title">ネットショッピングサービスにdカードをクレカとして登録する</div>
+              <div class="step-desc">
+                Amazon・ユニクロ・GO・Coke ON等のアカウント設定の「お支払い方法」で<strong>d払いではなくdカードのクレジットカード情報（番号・有効期限・セキュリティコード）を入力</strong>して登録。決済時に「d払い」を選ばず登録したdカードを選ぶよう意識します。
+              </div>
+            </div>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-nw">
+              <div class="step-n" aria-label="ステップ5">5</div>
+              <div class="step-line" aria-hidden="true"></div>
+            </div>
+            <div class="step-body">
+              <div class="step-title">d払い履歴で月1回「お支払い方法」をチェックする</div>
+              <div class="step-desc">
+                d払いアプリ → 「使った金額・もらったポイント」 → 個別取引をタップ → 「お支払い方法」を確認。<br>
+                <strong>「dカード」表示なら正常、「電話料金合算払い」表示があれば対象サービスを特定して修正</strong>します。月1回の確認習慣で知らない間の損失を防げます。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 失敗 -->
+      <section id="mistakes" class="sec" aria-labelledby="h-mistakes">
+        <div class="sec-head">
+          <span class="sec-n">09</span>
+          <div>
+            <h2 id="h-mistakes">よくある損のパターン10選</h2>
+            <p class="sec-desc">実際に多くのユーザーが踏んでいる落とし穴</p>
+          </div>
+        </div>
+
+        <div class="dlist">
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">①：d払いの支払い方法が初期設定の合算払いのまま</div>
+              <div class="di-desc">最も多いケース。d払いアプリのデフォルトは合算払いです。<strong>変更せずに使い続けると0.5%しか還元されません。</strong>まず設定確認を。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">②：セブンイレブンでdポイントカードを提示している</div>
+              <div class="di-desc">セブンはdポイント非加盟店のため<strong>提示してもポイントはゼロ</strong>。手間が無駄になります。セブンでの提示は省略してOK。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">③：AmazonでD払いを選んでいる</div>
+              <div class="di-desc">Amazonのd払いは<strong>問答無用で合算払い処理</strong>。dカード設定を無視して0.5%のみになります。dカードをクレカとして登録して直接決済してください。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">④：マクドナルド店頭でd払いQRをかざそうとしている</div>
+              <div class="di-desc">店頭レジでのQRコード払いは<strong>マクドナルドでは非対応</strong>です。店頭はiD（電子マネー）を使い、d払いを使いたい場合はモバイルオーダー経由に限られます。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑤：コンビニでiDを使っている（d払いの代わりに）</div>
+              <div class="di-desc">コンビニはほぼd払い対応です。<strong>iDを使うと常に0.5%損します。</strong>「d払いが使えない時のみiD」と決めることで年間数百〜数千ポイントの差になります。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑥：GOタクシーでd払いを選んでいる</div>
+              <div class="di-desc">GOのd払いは<strong>合算払い扱い確定</strong>。タクシーは1回数千円になりやすく損失が積み上がります。GOにはdカードをクレカとして登録してください。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑦：年間利用額特典の集計から合算払い分が除外されると知らない</div>
+              <div class="di-desc">年間利用額特典の集計に<strong>合算払い分は含まれません</strong>。「100万円まであと少し」と思っていても合算払い分を除くと届いていないケースがあります。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑧：2026年2月以降も公共料金をdカードで1.0%還元と思っている</div>
+              <div class="di-desc">2026年2月1日から電気・ガス・水道・eLTAXの還元率が<strong>200円に1ptに半減（実質0.5%）</strong>されました。固定費の支払い方法を見直す余地があります。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑨：dカードGOLDの年間利用額特典が「200万円で2万円」のままと思っている</div>
+              <div class="di-desc">dカードGOLDの年間利用額特典は<strong>2025年配布分から100万円で1万円に改悪</strong>（以前は2段階制）。dカードPLATINUMとの差が縮んだ点に注意。</div>
+            </div>
+          </div>
+          <div class="di">
+            <div class="di-ic">⚠️</div>
+            <div class="di-body">
+              <div class="di-title">⑩：d払い（dカード設定）でd払いポイントが入らないと思っている</div>
+              <div class="di-desc">d払い（dカード設定）の場合でも<strong>d払い独自ポイント0.5%とdカードポイント0.5%（dカード支払い特典）は別々に加算</strong>されます。合計1.0%が「d払い部分」の還元です。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 応用 -->
+      <section id="advanced" class="sec" aria-labelledby="h-advanced">
+        <div class="sec-head">
+          <span class="sec-n">10</span>
+          <div>
+            <h2 id="h-advanced">応用：ポイント積み上げの上位戦略</h2>
+            <p class="sec-desc">基本設定が完了したら次のステップ</p>
+          </div>
+        </div>
+
+        <div class="tlist">
+          <div class="ti">
+            <div class="ti-ic">🔥</div>
+            <div class="ti-body">
+              <div class="ti-title">dカードポイントUPモール経由でネット還元率を底上げ</div>
+              <div class="ti-desc">
+                dカード会員向けの「dカードポイントUPモール」を経由してAmazon・楽天市場・Yahoo!ショッピング等で購入すると、<strong>通常のdカード1.0%に加えてモール経由ポイントが+0.5〜最大10%加算</strong>されます。経由するだけで追加ポイントが発生する仕組みです。ブックマークに登録して毎回経由する習慣をつけると積み上がりが変わります。
+              </div>
+            </div>
+          </div>
+          <div class="ti">
+            <div class="ti-ic">🔥</div>
+            <div class="ti-body">
+              <div class="ti-title">年末の「100万円の壁」を意識した年間利用額調整</div>
+              <div class="ti-desc">
+                年間利用額特典は<strong>12月15日が集計の締め切り</strong>です。11〜12月頃に「あと数万円で節目到達」の状況なら、年払いできる固定費（保険・サービス等）を前倒しでdカード払いにまとめることで節目を達成できます。1万円分のクーポン取りきりのための逆算を意識しましょう。
+              </div>
+            </div>
+          </div>
+          <div class="ti">
+            <div class="ti-ic">🔥</div>
+            <div class="ti-body">
+              <div class="ti-title">d払い請求書払いで公共料金・税金もポイント化する</div>
+              <div class="ti-desc">
+                電気・ガス・水道・税金の請求書払いにd払いを使うと<strong>0.5%のd払いポイントが付与</strong>されます（dカード設定時はdカードポイントも加算）。ただし2026年2月からdカード直払いでの公共料金還元が0.5%に半減したため、d払い（dカード設定）での請求書払いが相対的に競合します。支払い方法の整理を推奨します。
+              </div>
+            </div>
+          </div>
+          <div class="ti">
+            <div class="ti-ic">🔥</div>
+            <div class="ti-body">
+              <div class="ti-title">dポイントクラブのエントリー制キャンペーンを毎月チェック</div>
+              <div class="ti-desc">
+                dポイントクラブアプリでは毎月複数の<strong>エントリー制キャンペーン</strong>が公開されています。エントリーしないと対象外になるため、月初にdポイントクラブアプリを開いてキャンペーンに全エントリーする習慣をつけると追加で数百〜数千ポイントの積み上げが見込めます。
+              </div>
+            </div>
+          </div>
+          <div class="ti">
+            <div class="ti-ic">🔥</div>
+            <div class="ti-body">
+              <div class="ti-title">dカードPLATINUMのグルメ優待「ダイニングby招待日和」を活用</div>
+              <div class="ti-desc">
+                dカードPLATINUM会員向けに、全国約200店舗のレストランで<strong>2名以上のコース利用時に1名分が無料</strong>になる「ダイニングby招待日和」が付帯しています（半年に1度）。高級レストランでの利用なら数千〜1万円以上の価値があり、年会費の元取りに直結します。利用には事前に招待日和のサイトへの初回登録が必要です。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 FAQ -->
+      <section id="faq" class="sec" aria-labelledby="h-faq">
+        <div class="sec-head">
+          <span class="sec-n">11</span>
+          <div>
+            <h2 id="h-faq">よくある質問（FAQ）</h2>
+            <p class="sec-desc">検索でよく見られる疑問への詳細回答</p>
+          </div>
+        </div>
+
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">d払いとiDの違いは何ですか？どちらがお得ですか？<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>技術的な違い</strong>：d払いはQRコード決済（アプリのバーコードを読み取り）、iDはFeliCaを使った非接触IC決済（端末をかざす）です。<br><br>
+                <strong>還元率（dカードPLATINUM・年間100万円以上利用の場合）</strong>：<br>
+                ・d払い（dカード設定）：2.5%（dポイント加盟店では3.0%）<br>
+                ・iD（dカードタッチ）：2.0%<br><br>
+                d払いが0.5%有利です。ただしこれはd払いの支払い方法を「dカード」に設定している場合に限ります。合算払いのままだと0.5%しか入らず大きく損します。<br><br>
+                <strong>使い分け原則</strong>：d払いが使える店 → d払い（dカード設定）。d払いが使えない店 → iD（dカードタッチ）。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">d払いの支払い方法の変更方法と確認方法を教えてください<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>変更方法</strong>：d払いアプリ → 右下「メニュー」 → 「お支払い方法」 → dカードを選択 → 確定。<br><br>
+                <strong>確認方法</strong>：d払いアプリのトップ画面（バーコード表示画面）のバーコード下に現在の支払い方法が表示されています。「dカード（末尾xxxx）」と表示されていれば正常。「電話料金合算払い」「dケータイ払いplus」と表示されていれば要変更です。<br><br>
+                <strong>変更できない場合</strong>：dカードの引き落とし口座が未設定、利用限度額に達している等が原因のことがあります。dカードカスタマーセンターへの確認を推奨します。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">dカードPLATINUMの年間利用額特典の内容と集計方法を教えてください<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>特典内容</strong>（2026年2月時点）：<br>
+                ・年間100万円：1万円相当クーポン<br>
+                ・年間200万円：2万円相当クーポン<br>
+                ・年間300万円：3万円相当クーポン<br>
+                ・年間400万円：4万円相当クーポン（最大）<br><br>
+                <strong>集計期間</strong>：毎年12月16日〜翌年12月15日のショッピング利用額。家族カード利用分も含まれます。<br><br>
+                <strong>対象外となる利用</strong>：携帯料金合算払い、キャッシング、dカード積立（マネックス証券）、電子マネーチャージ（Edyチャージ等）、モバイルSuicaチャージ等。<br><br>
+                <strong>特典付与時期</strong>：翌々年の5月下旬〜6月上旬頃が目安。最新の付与日はdカード公式サイトで確認してください。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">ローソンでd払いを使う際に最もお得な手順を教えてください<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>事前設定（初回のみ）</strong>：<br>
+                ①d払いアプリの支払い方法をdカードに設定<br>
+                ②dポイントカードをd払いアプリに連携<br><br>
+                <strong>購入時の手順</strong>：<br>
+                ①d払いアプリを開く<br>
+                ②バーコードを表示（dポイントカードが連携済みなら同画面に統合表示）<br>
+                ③「d払いで」と伝え、バーコードを読み取ってもらう<br>
+                ④支払い完了<br><br>
+                <strong>これで得られる還元率</strong>：d払い（dカード）1.0%＋年間利用額特典1.0%＋dポイント加盟店提示1.0%＝<strong>合計3.0%</strong><br><br>
+                ファミマも同じ手順で同率（1.0%加盟店）。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">AmazonでのD払いがなぜ損なのか詳しく説明してください<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                AmazonのD払いは、d払いアプリで「支払い方法＝dカード」に設定していても、<strong>Amazon側の仕様でd払いは一律「携帯料金合算払い」として処理</strong>されます。ユーザー設定より Amazon側の実装が優先されます。<br><br>
+                この場合 dカードポイント（1.0%）と年間利用額特典（1.0%）は一切加算されず、d払いポイント0.5%のみになります。<br><br>
+                一方、dカードをAmazonにクレジットカードとして直接登録して決済すると、<strong>dカードポイント1.0%＋年間利用額特典1.0%＝実質2.0%</strong>の還元が得られます。差は1.5%で、月1万円のAmazon利用なら年間1,800ポイントの差になります。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">2026年2月から公共料金の還元率が変わったと聞きました。具体的に何が変わりましたか？<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>変更内容</strong>：2026年2月1日から、dカードによる以下の支払いのdポイント還元率が変更されました。<br>
+                ・電気料金（対象電力会社）<br>
+                ・ガス料金<br>
+                ・水道料金<br>
+                ・地方税共同機構（eLTAX）での納税<br><br>
+                <strong>変更前</strong>：利用額100円につき1ポイント（1.0%）<br>
+                <strong>変更後</strong>：利用額200円につき1ポイント（0.5%）<br><br>
+                年間利用額特典は引き続き対象なので、年間100万円以上利用するユーザーの実質還元率は1.5%（0.5%＋年間利用額特典1.0%）になります。以前は2.0%だったため、この分野では改悪となっています。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">dカードPLATINUMとdカードGOLDはどちらがお得ですか？<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>基本還元率（1.0%）・d払い優位性（0.5%差）は両者同じ</strong>です。<br><br>
+                <strong>主な違い</strong>（2026年2月時点）：<br>
+                ・年会費：PLATINUM 29,700円 vs GOLD 11,000円<br>
+                ・年間利用額特典：PLATINUM 最大4万円分（400万円利用） vs GOLD 最大1万円分（100万円利用・2025年配布分以降）<br>
+                ・ドコモ料金還元：PLATINUM 最大20% vs GOLD 最大10%（eximo等対象）<br>
+                ・ケータイ補償：PLATINUM 最大20万円 vs GOLD 最大10万円（2026年1月〜自己負担15,000円が発生）<br>
+                ・プライオリティ・パス：PLATINUM 付帯 vs GOLD 非付帯<br><br>
+                年間利用額200万円以上・ドコモヘビーユーザー・空港ラウンジを頻繁に使う方はPLATINUMが有利になるケースが多いです。最新の特典内容は必ずdカード公式サイトでご確認ください。
+              </div>
+            </div>
+          </details>
+
+          <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="faq-q" itemprop="name">マクドナルドでd払いは使えますか？<span class="faq-ic" aria-hidden="true">+</span></summary>
+            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <strong>店頭レジ：使えません。</strong>マクドナルドの店頭レジでのQRコード読み取りによるd払いは非対応です。<br><br>
+                <strong>モバイルオーダー：使えます。</strong>マクドナルド公式アプリからのモバイルオーダー経由であれば、d払いでの支払いが可能です（ドライブスルーも対応）。<br><br>
+                店頭で電子マネーを使う場合はiD（dカードタッチ）が利用できます（実質2.0%）。モバイルオーダー経由でのd払い（dカード設定）は実質2.5%です。
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+    </article>
+  </div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="ft" role="contentinfo">
+  <div class="wrap">
+    <p>本ページは公開情報・公式仕様をもとに個人が独自に整理した非公式まとめです。</p>
+    <p style="margin-top:6px;">参考：dカード会員規約 ／ d払い利用規約 ／ iD公式情報 ／ dポイントクラブ規約</p>
+    <p style="margin-top:8px; font-size:12px;">
+      情報は将来変更される可能性があります。最新の条件は必ず
+      <a href="https://dcard.docomo.ne.jp/" rel="noopener noreferrer" target="_blank">dカード公式サイト</a>・
+      <a href="https://service.smt.docomo.ne.jp/keitai_payment/" rel="noopener noreferrer" target="_blank">d払い公式サイト</a>
+      でご確認ください。
+    </p>
+    <p style="margin-top:12px; font-size:11px;">© 2026 d払い・dカード・iD 実務ガイド</p>
+  </div>
+</footer>
+
 </body>
-
 </html>
-
-
-
-
-
